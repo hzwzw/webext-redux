@@ -158,9 +158,9 @@ class Store {
           const {error, value} = resp;
 
           if (error) {
-            const bgErr = new Error(`${backgroundErrPrefix}${error}`);
+            // const bgErr = new Error(`${backgroundErrPrefix}${error}`);
 
-            reject(assignIn(bgErr, error));
+            reject(error);
           } else {
             resolve(value && value.payload);
           }
